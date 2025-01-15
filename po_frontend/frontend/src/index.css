@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.spirax-regular {
+  font-family: "Spirax", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.inter-tight-400 {
+  font-family: "Inter Tight", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.playfair-display-500 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.playfair-display-600 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+@keyframes fadeInPopup {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popup-animation {
+  animation: fadeInPopup 0.5s ease-out;
+}
+/* In your global CSS file or inside a @layer directive in Tailwind config */
+.ql-container {
+  border-top: none; /* Removes the default border between toolbar and editor */
+}
+
+.ql-toolbar.ql-snow {
+  border: 2px solid black; /* Apply the black border to the toolbar */
+  border-bottom: 0; /* Remove bottom border of the toolbar */
+  border-radius: 8px 8px 0 0; /* Match rounded corners */
+}
+
+.ql-editor {
+  border: 2px solid black;
+  border-top: 0; /* Remove border overlap with the toolbar */
+  border-radius: 0 0 8px 8px; /* Match rounded corners */
+  min-height: 120px;
+}
